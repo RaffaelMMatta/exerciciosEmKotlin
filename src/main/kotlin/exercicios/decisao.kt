@@ -8,7 +8,7 @@ import kotlin.math.pow
 import kotlin.math.sqrt
 
 // 1- Faça um Programa que peça dois números e imprima o maior deles.
-fun main(){
+/*fun main(){
     print("num1: ")
     val num1 = readln().toInt()
     print("num2: ")
@@ -18,7 +18,7 @@ fun main(){
     }
     else
         println("$num2 é maior")
-}
+}*/
 
 // 2- Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
 
@@ -554,51 +554,38 @@ fun main(){
 // quantidade de carne comprada pelo usuário e gere um cupom fiscal, contendo as informações da compra: tipo e
 // quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar.
 
-/*
-fun main(){
+/*fun main() {
     print("Digite qual carne voce deseja: \n1 - Filé duplo\n2- Alcatra\n3- Picanha\n>> ")
     val opcao = readln().toInt()
     print("Digite quantos quilos deseja comprar\n>> ")
     val quantidade = readln().toInt()
     print("Irá utiliza os cartões tabajara? 1- sim 2- não\n>> ")
     val cartao = readln().toInt()
-    val tipoPagamento = if(cartao == 1) "Cartão Tabajara" else "outro metodo de pagamento"
-    val desconto = if(cartao == 1) 5 else 0
-
-    when(opcao){
-        1 -> {
-            val total = if(quantidade > 5) 5.80 * quantidade else 4.90 * quantidade
-            println(String.format("""carne: Filé Duplo
-                |quantidade: %d KG
-                |valor Total: R$ %.2f
-                |Tipo de pagamento: %s
-                |valor do desconto: %d %% 
-                |Valor a pagar: R$ %.2f""".trimMargin(),quantidade,total, tipoPagamento, desconto,(total*(1.0 - desconto / 100.0))))
-        }
-        2 -> {
-            val total = (if(quantidade > 5) 6.80 * quantidade else 5.90 * quantidade) * 0.95
-            println(String.format("""carne: Alcatra
-                |quantidade: %d KG
-                |valor Total: R$ %.2f
-                |Tipo de pagamento: %s
-                |valor do desconto: %d%% 
-                |Valor a pagar: R$ %.2f""".trimMargin(),quantidade,total, tipoPagamento, desconto,(total*(1.0 - desconto / 100.0))))
-
-        }
-        3 -> {
-            val total = (if(quantidade > 5) 7.80 * quantidade else 6.90 * quantidade) * 0.95
-            println(String.format("""carne: Picanha
-                |quantidade: %d KG
-                |valor Total: R$ %.2f
-                |Tipo de pagamento: %s
-                |valor do desconto: %d %% 
-                |Valor a pagar: R$ %.2f""".trimMargin(),quantidade,total, tipoPagamento, desconto,(total*(1.0 - desconto / 100.0))))
-
-        }
+    val tipoPagamento = if (cartao == 1) "Cartão Tabajara" else "outro metodo de pagamento"
+    val desconto = if (cartao == 1) 5 else 0
+    var tipoCarne = ""
+    var total = 0.0
+    when (opcao) {
+        1 ->  {total = if (quantidade > 5) 5.80 * quantidade else 4.90 * quantidade; tipoCarne = "Filé Duplo"}
+        2 ->  {total = if (quantidade > 5) 6.80 * quantidade else 5.90 * quantidade * 0.95; tipoCarne = "Alcatra"}
+        3 ->  {total = if (quantidade > 5) 7.80 * quantidade else 6.90 * quantidade * 0.95; tipoCarne = "Picanha"}
         else -> println("Valor Invalido!")
-    }
+        }
 
-
+    println(
+        String.format(
+            """carne: %s
+                |quantidade: %d KG
+                |valor Total: R$ %.2f
+                |Tipo de pagamento: %s
+                |valor do desconto: %d %% 
+                |Valor a pagar: R$ %.2f""".trimMargin(),
+            tipoCarne,
+            quantidade,
+            total,
+            tipoPagamento,
+            desconto,
+            (total * (1.0 - desconto / 100.0))
+        )
+    )
 }*/
-
-
