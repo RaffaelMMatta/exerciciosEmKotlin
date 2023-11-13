@@ -1,0 +1,4 @@
+package exercicios
+
+class decisao {
+}
