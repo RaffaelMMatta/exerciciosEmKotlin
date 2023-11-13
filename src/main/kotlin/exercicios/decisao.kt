@@ -1,5 +1,4 @@
 package exercicios
-
 import java.text.DateFormat
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -9,7 +8,7 @@ import kotlin.math.pow
 import kotlin.math.sqrt
 
 // 1- Faça um Programa que peça dois números e imprima o maior deles.
-/*fun main(){
+fun main(){
     print("num1: ")
     val num1 = readln().toInt()
     print("num2: ")
@@ -19,7 +18,7 @@ import kotlin.math.sqrt
     }
     else
         println("$num2 é maior")
-}*/
+}
 
 // 2- Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
 
