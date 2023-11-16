@@ -2,13 +2,32 @@ package exercicios
 
 // 1- Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue
 // pedindo até que o usuário informe um valor válido.
-fun main(){
-  
-}
+/*fun main(){
+
+    while(true){
+        print("Digite um numero de 0 a 10:\n>>>")
+        val num = readln().toInt()
+        if(num in 0..10) break
+        else println("Valor Invalido!!")
+    }
+    println("Fim do programa!!!")
+}*/
 
 // 2- Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário,
 // mostrando uma mensagem de erro e voltando a pedir as informações.
 
+/*fun main(){
+
+    while(true){
+        print("Digite o nome de usuario: ")
+        val username = readln()
+        print("Digite sua senha: ")
+        val userkey = readln()
+        if(username.equals(userkey)) println("Erro!! tente novamente")
+        else break
+    }
+    println("Acesso liberado!!!")
+}*/
 
 // 3- Faça um programa que leia e valide as seguintes informações:
 //Nome: maior que 3 caracteres;
@@ -17,35 +36,179 @@ fun main(){
 //Sexo: 'f' ou 'm';
 //Estado Civil: 's', 'c', 'v', 'd';
 
+/*fun main(){
+    while (true){
+        print("Nome: ")
+        val nome = readln()
+        if(nome.length < 3){
+            println("Nome invalido!!")
+            continue
+        }
+        print("Idade: ")
+        val idade = readln().toInt()
+        if(idade !in 0..150){
+            println("idade invalida!!")
+            continue
+        }
+        print("Salario: ")
+        val salario = readln().toDouble()
+        if(salario <= 0){
+            println("Salario invalido!!")
+            continue
+        }
+        print("Sexo: ")
+        val sexo = readln()[0]
+        if(sexo != 'f' && sexo != 'm'){
+            println("Nome invalido!!")
+            continue
+        }
+        print("Estado Civil: ")
+        val estadoCivil = readln()[0]
+        if(estadoCivil != 's' && estadoCivil != 'c' && estadoCivil != 'v' && estadoCivil != 'd'){
+            println("Nome invalido!!")
+            continue
+        }
+
+        println("""
+            Nome: $nome
+            Idade: $idade
+            Salario: $salario
+            Sexo: $sexo
+            Estado Civil: $estadoCivil
+        """.trimIndent())
+        break
+    }
+}*/
 
 // 4- Supondo que a população de um país A seja da ordem de 80000 habitantes com uma taxa anual de crescimento de 3% e
 // que a população de B seja 200000 habitantes com uma taxa de crescimento de 1.5%. Faça um programa que calcule e
 // escreva o número de anos necessários para que a população do país A ultrapasse ou iguale a população do país B,
 // mantidas as taxas de crescimento.
 
+/*fun main(){
+    var paisA = 80_000
+    var paisB = 200_000
+    var anos = 0
+    while(paisB > paisA){
+        paisA = (paisA * 1.03).toInt()
+        paisB = (paisB * 1.015).toInt()
+        anos++
+        println("Pais A = $paisA : Pais B = $paisB")
+    }
+    println("total para ultrapassar é de $anos")
+
+}*/
 
 // 5- Altere o programa anterior permitindo ao usuário informar as populações e as taxas de crescimento iniciais.
 // Valide a entrada e permita repetir a operação.
-
+/*fun main(){
+    print("Digite A quantidade de população do País A: ")
+    var paisA = readln().toInt()
+    print("Digite A quantidade de população do País B: ")
+    var paisB = readln().toInt()
+    var anos = 0
+    while(paisB > paisA){
+        paisA = (paisA * 1.03).toInt()
+        paisB = (paisB * 1.015).toInt()
+        anos++
+        println("Pais A = $paisA : Pais B = $paisB")
+    }
+    println("total para ultrapassar é de $anos")
+}*/
 
 // 6- Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro. Depois modifique o programa para
 // que ele mostre os números um ao lado do outro.
-
+/*fun main(){
+    for (i in 1..20){
+        print("$i ")
+    }
+}*/
 
 // 7- Faça um programa que leia 5 números e informe o maior número.
-
+/*fun main(){
+    var numeros = arrayOf(0,0,0,0,0)
+    for(i in numeros.indices){
+        print("informe o #${i} numero: ")
+        numeros[i] = readln().toInt()
+    }
+    println("Maior: ${numeros.maxOrNull()}")
+}*/
 
 // 8- Faça um programa que leia 5 números e informe a soma e a média dos números.
-
+/*fun main(){
+    var numeros = arrayOf(0,0,0,0,0)
+    var sum = 0
+    for(i in numeros.indices){
+        print("informe o #${i} numero: ")
+        numeros[i] = readln().toInt()
+        sum += numeros[i]
+    }
+    println("Soma: $sum\nMedia: ${sum.toDouble() / numeros.size}")
+}*/
 
 // 9- Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
-
+/*fun main(){
+    for (i in 1..50 step 2){
+        print("$i ")
+    }
+}*/
 
 //10- Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.
+/*fun main(){
+    var num1 = 0
+    var num2 = 0
+    while (true) {
+        print("Digite o primeiro numero do intervalo: ")
+        num1 = readln().toInt()
+        print("Digite o segundo numero do intervalo: ")
+        num2 = readln().toInt()
+        if (num1 > num2) {
+            var troca = num1
+            num1 = num2
+            num2 = troca
+            break
+        }
+        if(num1 == num2) {
+            println("Digite valores diferentes do outro")
+            continue
+        }
+        break
 
+    }
+    for (i in num1 .. num2){
+        print("$i ")
+    }
+}*/
 
 //11- Altere o programa anterior para mostrar no final a soma dos números.
+/*fun main(){
+    var num1 = 0
+    var num2 = 0
+    var sum = 0
+    while (true) {
+        print("Digite o primeiro numero do intervalo: ")
+        num1 = readln().toInt()
+        print("Digite o segundo numero do intervalo: ")
+        num2 = readln().toInt()
+        if (num1 > num2) {
+            var troca = num1
+            num1 = num2
+            num2 = troca
+            break
+        }
+        if(num1 == num2) {
+            println("Digite valores diferentes do outro")
+            continue
+        }
+        break
 
+    }
+    for (i in num1.. num2){
+        print("$i ")
+        sum += i
+    }
+    println("Soma = $sum")
+}*/
 
 //12- Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10.
 // O usuário deve informar de qual numero ele deseja ver a tabuada. A saída deve ser conforme o exemplo abaixo:
@@ -54,26 +217,84 @@ fun main(){
 //5 X 2 = 10
 //...
 //5 X 10 = 50
-
+/*fun main(){
+    print("digite um numero para tabuada: ")
+    val num = readln().toInt()
+    for(i in 0 .. 10){
+        println("$num * $i = ${num*i}")
+    }
+}*/
 
 //13- Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro número elevado ao segundo número.
 // Não utilize a função de potência da linguagem.
-
+/*fun main(){
+    print("Digite a base: ")
+    val base = readln().toInt()
+    print("Digite o expoente")
+    val expoente = readln().toInt()
+    var total = base
+    for(i in 1 ..< expoente){
+        total *= base
+    }
+    print(total)
+}*/
 
 //14- Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade de números pares e a quantidade
 // de números impares.
-
+/*fun main(){
+    val array = Array(10) { i -> i }
+    var par = 0
+    var impar = 0
+    for (i in array.indices){
+        print("digite o #$i: ")
+        array[i] = readln().toInt()
+        if(array[i] % 2 == 0) par++
+        else impar++
+    }
+    println("Quantidades\nPar: $par\nImpar: $impar")
+}*/
 
 //15- A série de Fibonacci é formada pela seqüência 1,1,2,3,5,8,13,21,34,55,... Faça um programa capaz de gerar a
 // série até o n−ésimo termo.
-
+/*fun main(){
+    var num1 = 0
+    var num2 = 1
+    print("Digite o n-ésimo numero do fibonacci")
+    val last = readln().toInt()
+    print("$num1 ")
+    while(true){
+        num1 += num2
+        num2 = num1 - num2
+        if(num1 >= last) break
+        print("$num1 ")
+    }
+}*/
 
 //16- A série de Fibonacci é formada pela seqüência 0,1,1,2,3,5,8,13,21,34,55,... Faça um programa que gere a série
 // até que o valor seja maior que 500.
-
+/*fun main(){
+    var num1 = 0
+    var num2 = 1
+    print("$num1 ")
+    while(true){
+        num1 += num2
+        num2 = num1 - num2
+        print("$num1 ")
+        if(num1 >= 500) break
+    }
+}*/
 
 //17- Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário. Ex.: 5!=5.4.3.2.1=120
 
+/*fun main(){
+    print("Digite um numero inteiro para fatorar: ")
+    val num = readln().toInt()
+    var total = 1
+    for(i in 1 .. num){
+        total *= i
+    }
+    println(total)
+}*/
 
 //18- Faça um programa que, dado um conjunto de N números, determine o menor valor, o maior valor e a soma dos valores.
 
