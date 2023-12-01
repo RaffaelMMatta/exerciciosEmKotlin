@@ -298,26 +298,122 @@ package exercicios
 
 //18- Faça um programa que, dado um conjunto de N números, determine o menor valor, o maior valor e a soma dos valores.
 
+/*fun main(){
+    var max = 0
+    var min = 0
+
+    loop@ while(true){
+        print("Digite um numero. digite -1 para sair\n>>>>>> ")
+        val num = readln().toInt()
+        when{
+            num == -1 -> break@loop
+            min == 0 && max == 0 -> {min = num ; max = num}
+            num < min -> min = num
+            num > max -> max = num
+
+        }
+    }
+    println("Max = $max\nMin = $min")
+}*/
 
 //19- Altere o programa anterior para que ele aceite apenas números entre 0 e 1000.
+/*fun main(){
+    var max = 0
+    var min = 0
 
+    loop@ while(true){
+        print("Digite um numero entre 0 e 1000. digite -1 para sair\n>>>>>> ")
+        val num = readln().toInt()
+        when{
+            num == -1 -> break@loop
+            num < 0 || num > 1000 -> println("valor invalido!!!")
+            min == 0 && max == 0 -> {min = num ; max = num}
+            num < min -> min = num
+            num > max -> max = num
+
+        }
+    }
+    println("Max = $max\nMin = $min")
+}*/
 
 //20- Altere o programa de cálculo do fatorial, permitindo ao usuário calcular o fatorial várias vezes e limitando o
 // fatorial a números inteiros positivos e menores que 16.
+/*fun main(){
+    while(true) {
+        print("Digite um numero inteiro para fatorar menor que 16. -1 para sair\n>>> ")
+        val num = readln().toInt()
+        var total = 1L
+        if(num == -1) break
+        if(num > 16 || num <= 0){
+            println("numero invalido!!!")
+            continue
+        }
+        for (i in 1..num) {
+            total *= i
+        }
+        println(total)
+    }
 
+}*/
 
 //21- Faça um programa que peça um número inteiro e determine se ele é ou não um número primo. Um número primo é aquele
 // que é divisível somente por ele mesmo e por 1.
+/*fun main(){
+    print("Digite um numero para verificar se é primo: ")
+    val num = readln().toInt()
+    var teste = true
+    for(i in 2..< num){
+        if(num % i == 0) {teste = false; break}
+    }
+    if(!teste)
+        println("$num não é um numero primo!!!")
 
+    else
+        println("$num é um numero primo!!!")
+}*/
 
 //22- Altere o programa de cálculo dos números primos, informando, caso o número não seja primo,
 // por quais número ele é divisível.
+/*fun main(){
+    print("Digite um numero para verificar se é primo: ")
+    val num = readln().toInt()
+    var teste = true
+    for(i in 2..< num){
+        if(num % i == 0) {teste = false; print("$i ")
+        }
+    }
+    if(!teste)
+        println("\n$num não é um numero primo!!!")
+
+    else
+        println("$num é um numero primo!!!")
+}*/
 
 
 //23- Faça um programa que mostre todos os primos entre 1 e N sendo N um número inteiro fornecido pelo usuário.
 // O programa deverá mostrar também o número de divisões que ele executou para encontrar os números primos.
 // Serão avaliados o funcionamento, o estilo e o número de testes (divisões) executados.
+/*fun main(){
+    print("Digite um numero para verificar se é primo: ")
+    val num = readln().toInt()
+    println("1 é um primo")
+    println("2 é um primo")
+    for(i in 3.. num){
+        for(j in 2.. i){
+            if(j == i){
+                print(" = $i é um primo")
+                break
+            }
+            print("$j ")
+            if(i % j == 0){
+                print("-> $i / $j = ${i/j} então, $i não é primo")
+                break
+            }
+        }
+        println()
+    }
 
+}*/
 
 //24- Faça um programa que calcule o mostre a média aritmética de N notas.
 
