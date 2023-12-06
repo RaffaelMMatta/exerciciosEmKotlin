@@ -4,7 +4,24 @@ package exercicios
 //
 //Atributos: Cor, circunferência, material
 //Métodos: trocaCor e mostraCor
+/*class Bola(cor: String, circunferencia: Double, material: String){
 
+    private var cor = cor;
+    private var circunferencia = circunferencia
+    private var material = material
+
+    fun trocarCor(mudarCor: String){
+        cor = mudarCor
+    }
+    fun mostrarCor(){
+        println("Cor: $cor")
+    }
+}
+fun main(){
+    val bola = Bola("azul", 20.5, "ferro")
+    bola.trocarCor("Vermelho")
+    bola.mostrarCor()
+}*/
 
 // 2- Classe Quadrado: Crie uma classe que modele um quadrado:
 //

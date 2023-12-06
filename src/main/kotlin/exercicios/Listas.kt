@@ -1,10 +1,32 @@
 package exercicios
-
+// OBS: EM KOTLIN NÃO É POSSIVEL CRIAR UM ARRAYOF COM POSIÇÕES INICIAIS SENDO ASSIM NECESSARIO UTILIZAR O MUTABLE
+//OU INSTANCIAR A QUANTIDADE COM 0 E DEPOIS SUBSTITUIR OS VALORES
 // 1- Faça um Programa que leia um vetor de 5 números inteiros e mostre-os.
+/*fun main(){
+    val array = arrayOf(0, 0, 0, 0, 0)
+    for(i in array.indices) {
+        print("Digite o array $i# ")
+        array[i] = readln().toInt()
+    }
+    array.forEach {
+        print("$it ")
 
+    }
+}*/
 
 // 2- Faça um Programa que leia um vetor de 10 números reais e mostre-os na ordem inversa.
+/*fun main(){
+    val array = arrayOf(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+    for(i in array.indices) {
+        print("Digite o array $i# ")
+        array[i] = readln().toDouble()
+    }
+    array.reverse()
+    array.forEach {
+        print("$it ")
 
+    }
+}*/
 
 // 3- Faça um Programa que leia 4 notas, mostre as notas e a média na tela.
 

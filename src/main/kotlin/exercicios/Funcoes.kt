@@ -8,6 +8,32 @@ package exercicios
 //    n   n   n   n   n   n  ... n
 //para um n informado pelo usuário. Use uma função que receba um valor n inteiro e imprima até a n-ésima linha.
 
+/*fun main(){
+    print("Digite o numero de linhas que deseja colocar")
+    val num = readln().toInt()
+    imprimindoLinhas(num)
+    //imprimindoLinhasRecursivo(1, num)
+
+}
+
+fun imprimindoLinhas(num: Int) {
+    for(i in 1 .. num){
+        for(j in 1 .. i){
+            print("$i ")
+        }
+        println()
+    }
+}
+//Forma Recursiva
+fun imprimindoLinhasRecursivo(valor: Int, num: Int) {
+    if(num != 0) {
+        for (i in 1..valor) {
+            print("$valor ")
+        }
+        println()
+        imprimindoLinhasRecursivo((valor+1),(num-1))
+    }
+}*/
 
 
 // 2- Faça um programa para imprimir:
@@ -18,6 +44,19 @@ package exercicios
 //    1   2   3   ...  n
 //para um n informado pelo usuário. Use uma função que receba um valor n inteiro imprima até a n-ésima linha.
 
+/*fun main(){
+    print("Digite o numero de linhas que deseja colocar")
+    val num = readln().toInt()
+    imprimindoLinhas(num)
+}
+fun imprimindoLinhas(num: Int) {
+    for(i in 1 .. num){
+        for(j in 1 .. i){
+            print("$j ")
+        }
+        println()
+    }
+}*/
 
 // 3- Faça um programa, com uma função que necessite de três argumentos, e que forneça a soma desses três argumentos.
 

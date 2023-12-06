@@ -416,24 +416,111 @@ package exercicios
 }*/
 
 //24- Faça um programa que calcule o mostre a média aritmética de N notas.
+/*fun main(){
+    var count = 0
+    var notasSomadas = 0.0
+    while (true){
+        print("Digite a nota: -1 para sair\n>>>")
+        val nota = readln().toDouble()
+        if(nota.toInt() == -1) break
+        if(nota < 0 || nota > 10){
+            println("Nota invalida")
+            continue
+        }
+        count++
+        notasSomadas += nota
+    }
+    val texto = String.format("media final: %.2f", (notasSomadas / count))
+    println(texto)
 
+}*/
 
 //25- Faça um programa que peça para n pessoas a sua idade, ao final o programa devera verificar se a média de idade
 // da turma varia entre 0 e 25,26 e 60 e maior que 60; e então, dizer se a turma é jovem, adulta ou idosa,
 // conforme a média calculada.
-
+/*fun main(){
+    var count = 0
+    var idadesSomadas = 0
+    while(true){
+        print("Digite a idade: -1 para sair\n>>>")
+        val idade = readln().toInt()
+        if(idade == -1) break
+        if(idade < 0 || idade > 130){
+            println("Idade invalida!!!")
+            continue
+        }
+        idadesSomadas += idade
+        count++
+    }
+    val media = idadesSomadas/count
+    when{
+        media in 1..25 -> print("Media de idade: $media Turma: Jovens")
+        media in 26..60 -> print("Media de idade: $media Turma: Adulto")
+        else-> print("Media de idade: $media Turma: Idosos")
+    }
+}*/
 
 //26- Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores.
 // Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato.
-
+/*fun main(){
+    print("Quantos eleitores existem no local: ")
+    val eleitores = readln().toInt()
+    println("Candidatos atuais: 1 - Sabugo\n2- Calabreso\n3- Sobremeso")
+    var sabugo = 0
+    var calabreso = 0
+    var sobremeso = 0
+    for(i in 1 .. eleitores){
+        print("Eleitor $i: Vai votar em quem? ")
+        val voto = readln().toInt()
+        when(voto){
+            1 -> sabugo++
+            2 -> calabreso++
+            3 -> sobremeso++
+        }
+    }
+    println("""
+        Contando votos:
+        Sabugo: $sabugo
+        calabreso: $calabreso
+        Sobremeso: $sobremeso
+    """.trimIndent())
+}*/
 
 //27- Faça um programa que calcule o número médio de alunos por turma. Para isto, peça a quantidade de turmas e a
 // quantidade de alunos para cada turma. As turmas não podem ter mais de 40 alunos.
+/*fun main(){
+    print("Quantas turmas tem ao todo?")
+    val turmas = readln().toInt()
+    var total = 0
+    var i = 1
+    while(i <= turmas) {
+        print("Digite a quantidade de alunos na turma: ")
+        val qteAlunos = readln().toInt()
+        if(qteAlunos in 1..40){
+            total += qteAlunos
+            i++
+            continue
+        }
+        print("valor invalido!!!")
+    }
 
+    print("Media de alunos por turma: ${total/turmas}")
+}*/
 
 //28- Faça um programa que calcule o valor total investido por um colecionador em sua coleção de CDs e o valor médio
 // gasto em cada um deles. O usuário deverá informar a quantidade de CDs e o valor para em cada um.
-
+/*
+fun main(){
+    print("Quantos CDs foram comprados? ")
+    val cdComprados = readln().toInt()
+    var total = 0.0
+    for(i in 1 .. cdComprados){
+        print("Digite o valor do cd $i# ")
+        total += readln().toDouble()
+    }
+    println("Foram comprados $cdComprados CDs e a media de preços foram: ${total/cdComprados}")
+}
+*/
 
 //29- O Sr. Manoel Joaquim possui uma grande loja de artigos de R$ 1,99, com cerca de 10 caixas.
 // Para agilizar o cálculo de quanto cada cliente deve pagar ele desenvolveu um tabela que contém o
